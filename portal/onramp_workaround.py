@@ -3,8 +3,11 @@ regions = ["us-east1", "us-central1", "us-west4", "us-south1", "us-east5", "us-e
 
 regions_thinking = ["us-central1", "us-central1"]
 
+regions_old = ["us-central1" ]
+
 last_region_used=0
 last_thinking_region_used=0
+last_old_region_used=0
 
 
 def get_next_region():
@@ -16,3 +19,8 @@ def get_next_thinking_region():
     global last_thinking_region_used 
     last_thinking_region_used = (last_thinking_region_used + 1) % len(regions_thinking)
     return regions_thinking[last_thinking_region_used]
+
+def get_next_old_region():
+    global last_old_region_used 
+    last_old_region_used = (last_old_region_used + 1) % len(regions_old)
+    return regions_old[last_old_region_used]
