@@ -43,9 +43,9 @@ def generate_quiz():
     #num_questions = 5  # Default number of questions
     # Can I turn this into Langgraph
     quiz = []
-    quiz.append(generate_quiz_question("teaching_plan.txt", "easy", get_next_region()))
-    quiz.append(generate_quiz_question("teaching_plan.txt", "medium", get_next_region()))
-    quiz.append(generate_quiz_question("teaching_plan.txt", "hard", get_next_region()))
+    quiz.append(generate_quiz_question("teaching_plan.txt", "easy", get_next_old_region()))
+    quiz.append(generate_quiz_question("teaching_plan.txt", "medium", get_next_old_region()))
+    quiz.append(generate_quiz_question("teaching_plan.txt", "hard", get_next_old_region()))
 
     return jsonify(quiz)
 
