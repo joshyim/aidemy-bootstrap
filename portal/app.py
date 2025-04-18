@@ -7,7 +7,7 @@ from flask import Flask, render_template, request, jsonify, send_from_directory
 from langchain_google_vertexai import ChatVertexAI
 from quiz import generate_quiz_question
 from answer import answer_thinking
-from onramp_workaround import get_next_region,get_next_thinking_region
+from onramp_workaround import get_next_region,get_next_thinking_region,get_next_old_region
 from google.cloud import storage  
 
 from render import render_assignment_page
@@ -120,10 +120,9 @@ def download_course_audio(week):
         return "Error generating download link", 500 
 
 
-
-## Add your code here
+## REPLACE ME! NEW TEACHING PLAN
         
-## Add your code here
+## REPLACE ME! RENDER ASSIGNMENT
 
 if __name__ == "__main__":
     app.run(debug=True, host="0.0.0.0", port=int(os.environ.get("PORT", 8080)))
